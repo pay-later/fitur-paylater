@@ -1,0 +1,11 @@
+step "blueprint" {
+    name = "Blueprint"
+
+    action {
+        action_type = "Octopus.Blueprint"
+        properties = {
+            Octopus.Action.RunOnServer = "false"
+        }
+        worker_pool_variable = ""
+    }
+}
