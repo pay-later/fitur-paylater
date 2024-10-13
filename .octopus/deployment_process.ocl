@@ -1,22 +1,17 @@
-step "blueprint" {
-    name = "Blueprint"
-
-    action {
-        action_type = "Octopus.Blueprint"
-        properties = {
-            Octopus.Action.RunOnServer = "false"
-        }
-        worker_pool_variable = ""
+step "deploy-a-helm-chart" {
+    name = "Deploy a Helm Chart"
+    properties = {
+        Octopus.Action.TargetRoles = "id-clusters,Idll saq,Sssisisis"
     }
-}
-
-step "blueprintz" {
-    name = "Blueprintz"
 
     action {
-        action_type = "Octopus.Blueprint"
+        action_type = "Octopus.HelmChartUpgrade"
         properties = {
-            Octopus.Action.RunOnServer = "false"
+            Octopus.Action.GitRepository.Source = "Project"
+            Octopus.Action.Helm.ClientVersion = "V3"
+            Octopus.Action.Helm.ReleaseName = "#{Octopus.Account.AccountType}"
+            Octopus.Action.Helm.ResetValues = "True"
+            Octopus.Action.Script.ScriptSource = "GitRepository"
         }
         worker_pool_variable = ""
     }
